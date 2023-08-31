@@ -1,23 +1,39 @@
 package org.example;
 
+import org.example.entities.Transactions;
+import org.example.entities.TransactionsDAO;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 
 public class Receipt {
-    private static int receiptNumber = 1;
+
+    //Создаем объект транзакции и узнаем номер нового чека
+    TransactionsDAO trdao = new TransactionsDAO(ConnectionMaker.getConnection());
+    private int receiptNumber = trdao.getMaxId() + 1;
+
     private final LocalDateTime dateTime = LocalDateTime.now();
 
-    public void makeDepositWithdraw(String transaction, String sendersAccount, double amount) {
+    public Receipt() throws SQLException {
+    }
+
+    public void makeDepositWithdraw(String transaction, String sendersAccount, double amount) throws SQLException {
+
+        // добавляем операцию в таблицу
+        Transactions tr = new Transactions(receiptNumber, dateTime, transaction, amount);
+        trdao.create(tr);
+
+        // делаем тектовый чек
         int length = 50;
         String num = Integer.toString(receiptNumber);
         receiptNumber++;
         DateTimeFormatter receiptDtf = DateTimeFormatter.ofPattern("dd-MM-yyyy HH-mm-ss");
-        String path = "src/check/Receipt №" + num + " from " + receiptDtf.format(dateTime) + ".txt";
+        String path = "src/check/Receipt " + num + " from " + receiptDtf.format(dateTime) + ".txt";
         File newReceipt = new File(path);
 
         try (FileWriter fw = new FileWriter(newReceipt)) {
@@ -81,13 +97,20 @@ public class Receipt {
             throw new RuntimeException(e);
         }
     }
+
     public void makeMoneyOrder(String transaction, String sendersBank, String payeesBank, String sendersAccount,
-                               String payeesAccount, double amount) {
+                               String payeesAccount, double amount) throws SQLException {
+
+        // добавляем операцию в таблицу
+        Transactions tr = new Transactions(receiptNumber, dateTime, transaction, amount);
+        trdao.create(tr);
+
+        // делаем чек
         int length = 50;
         String num = Integer.toString(receiptNumber);
         receiptNumber++;
         DateTimeFormatter receiptDtf = DateTimeFormatter.ofPattern("dd-MM-yyyy HH-mm-ss");
-        String path = "src/check/Receipt №" + num + " from " + receiptDtf.format(dateTime) + ".txt";
+        String path = "src/check/Receipt " + num + " from " + receiptDtf.format(dateTime) + ".txt";
         File newReceipt = new File(path);
 
         try (FileWriter fw = new FileWriter(newReceipt)) {
