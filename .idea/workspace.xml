@@ -4,24 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3d6c6ee-c42b-446b-8896-1e51aae13b1d" name="Changes" comment="big changes">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b3d6c6ee-c42b-446b-8896-1e51aae13b1d" name="Changes" comment="working version 03.09.23">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dump-clever-202308311349.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ConnectionMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ConnectionMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/InterestCalculation/ConfigReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/InterestCalculation/ConfigReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/InterestCalculation/InterestCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/InterestCalculation/InterestCalculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Receipt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/BankAccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/BankAccountDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/BankDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/BankDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/BankUserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/BankUserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entities/TransactionsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entities/TransactionsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/transactions/Deposit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/transactions/Deposit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/transactions/Transfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/transactions/Transfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/transactions/Withdraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/transactions/Withdraw.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +147,21 @@
       <option name="project" value="LOCAL" />
       <updated>1693478282636</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="working version 03.09.23">
+      <created>1693757169831</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1693757169831</updated>
+    </task>
+    <task id="LOCAL-00005" summary="working version 03.09.23">
+      <created>1693757185722</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1693757185722</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -219,6 +217,7 @@
     </ignored-roots>
     <MESSAGE value="first one" />
     <MESSAGE value="big changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="big changes" />
+    <MESSAGE value="working version 03.09.23" />
+    <option name="LAST_COMMIT_MESSAGE" value="working version 03.09.23" />
   </component>
 </project>
