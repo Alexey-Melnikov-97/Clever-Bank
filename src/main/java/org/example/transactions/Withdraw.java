@@ -2,7 +2,7 @@ package org.example.transactions;
 
 import org.example.entities.BankAccount;
 import org.example.entities.BankAccountDAO;
-import org.example.Receipt;
+import org.example.Receipts.DepositWithdrawTransaction;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -31,7 +31,7 @@ public class Withdraw {
                 badao.update(account);
                 System.out.println("Операция выполнена успешно. Баланс вашего лицевого счета составляет: "
                         + badao.getByUserId(1).getAmount());
-                Receipt rcpt = new Receipt();
+                DepositWithdrawTransaction rcpt = new DepositWithdrawTransaction();
                 rcpt.makeDepositWithdraw("Withdraw", Integer.toString(account.getId()), val);
             } else {
                 System.out.println("Недостаточно средств на счете.");

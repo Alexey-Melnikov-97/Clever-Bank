@@ -1,7 +1,7 @@
 package org.example.transactions;
 
 import org.example.ConnectionMaker;
-import org.example.Receipt;
+import org.example.Receipts.DepositWithdrawTransaction;
 import org.example.entities.Bank;
 import org.example.entities.BankAccount;
 import org.example.entities.BankAccountDAO;
@@ -10,7 +10,6 @@ import org.example.entities.BankDAO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Transfer {
@@ -20,7 +19,6 @@ public class Transfer {
 
         try  {
 
-            DecimalFormat formatter = new DecimalFormat("#0,00");
 
             // Устанавливаем соединение с БД
             connection = ConnectionMaker.getConnection();
@@ -72,7 +70,7 @@ public class Transfer {
                     + badao.getByUserId(1).getAmount());
 
             // Делаем чек (замудрил)
-            Receipt rcpt = new Receipt();
+            DepositWithdrawTransaction rcpt = new DepositWithdrawTransaction();
             BankDAO bdao = new BankDAO(connection);
             int sendersBankId = sendersAccount.getBankId();
             Bank sender = new Bank(sendersBankId, bdao.getBankById(sendersBankId).getName());

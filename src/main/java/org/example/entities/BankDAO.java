@@ -4,8 +4,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class BankDAO {
     private final Connection connection;
@@ -28,19 +26,4 @@ public class BankDAO {
         }
         return null;
     }
-
-    public List<Bank> getAllBanks() throws SQLException {
-        List<Bank> banks = new ArrayList<>();
-        String query = "SELECT * FROM bank";
-        try (PreparedStatement statement = connection.prepareStatement(query);
-             ResultSet resultSet = statement.executeQuery()) {
-            while (resultSet.next()) {
-                int bankId = resultSet.getInt("id");
-                String name = resultSet.getString("name");
-                banks.add(new Bank(bankId, name));
-            }
-        }
-        return banks;
-    }
-
 }

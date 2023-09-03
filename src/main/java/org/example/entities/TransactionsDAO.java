@@ -32,8 +32,8 @@ public class TransactionsDAO {
 
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
-                LocalDateTime dateTime = resultSet.getObject("date_time", LocalDateTime.class);
-                String transaction = resultSet.getString("transaction");
+                LocalDateTime dateTime = resultSet.getObject("datetime", LocalDateTime.class);
+                String transaction = resultSet.getString("transaction_type");
                 double amount = resultSet.getDouble("amount");
 
                 Transactions transactions = new Transactions(id, dateTime, transaction, amount);
@@ -43,7 +43,6 @@ public class TransactionsDAO {
 
         return transactionsList;
     }
-
     public int getMaxId() throws SQLException {
         int id = 0;
         String query = "SELECT MAX(id) FROM transactions";
